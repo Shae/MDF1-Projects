@@ -9,6 +9,8 @@
 #import "stackableCell.h"
 
 @implementation stackableCell
+@synthesize label;
+@synthesize image;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

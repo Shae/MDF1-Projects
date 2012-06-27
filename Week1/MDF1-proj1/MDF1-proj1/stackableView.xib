@@ -43,7 +43,7 @@
 							<object class="IBUILabel" id="789442217">
 								<reference key="NSNextResponder" ref="788504794"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{78, 0}, {252, 43}}</string>
+								<string key="NSFrame">{{63, 0}, {252, 43}}</string>
 								<reference key="NSSuperview" ref="788504794"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -116,11 +116,19 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">labelLabel</string>
+						<string key="label">label</string>
 						<reference key="source" ref="850102985"/>
 						<reference key="destination" ref="789442217"/>
 					</object>
-					<int key="connectionID">6</int>
+					<int key="connectionID">7</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">image</string>
+						<reference key="source" ref="850102985"/>
+						<reference key="destination" ref="962611462"/>
+					</object>
+					<int key="connectionID">8</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -176,7 +184,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">6</int>
+			<int key="maxID">8</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -185,8 +193,9 @@
 					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="cellImage">UIImageView</string>
-						<string key="cellLabel">UITextView</string>
-						<string key="labelLabel">UILabel</string>
+						<string key="cellLabel">UILabel</string>
+						<string key="image">UIImageView</string>
+						<string key="label">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="cellImage">
@@ -195,10 +204,14 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="cellLabel">
 							<string key="name">cellLabel</string>
-							<string key="candidateClassName">UITextView</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="labelLabel">
-							<string key="name">labelLabel</string>
+						<object class="IBToOneOutletInfo" key="image">
+							<string key="name">image</string>
+							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="label">
+							<string key="name">label</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

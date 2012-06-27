@@ -10,9 +10,11 @@
 
 @interface stackableCell : UITableViewCell
 {
-    IBOutlet UITextView *cellLabel;
+    IBOutlet UILabel *cellLabel;
     IBOutlet UIImageView *cellImage;
-    __weak IBOutlet UILabel *labelLabel;
+   // __weak IBOutlet UILabel *labelLabel;
 }
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @end

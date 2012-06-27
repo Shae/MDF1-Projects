@@ -56,12 +56,12 @@
             if([view isKindOfClass:[stackableCell class]])
             {
                 cell = (stackableCell*) view;
-                cell.textLabel.text = [myArray objectAtIndex:indexPath.row];
+                cell.label.text = [myArray objectAtIndex:indexPath.row];
             }
         }
 
     }
-    cell.textLabel.text = (NSString*) [myArray objectAtIndex:indexPath.row];
+    //cell.textLabel.text = (NSString*) [myArray objectAtIndex:indexPath.row];
     return cell;
 }
 @end
