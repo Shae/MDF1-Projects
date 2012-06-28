@@ -17,6 +17,7 @@
 		BFDF8883159A8DAD008EFBE4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDF8881159A8DAD008EFBE4 /* ViewController.xib */; };
 		BFDF888A159A8E53008EFBE4 /* stackableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFDF8889159A8E53008EFBE4 /* stackableView.xib */; };
 		BFDF888D159A8F19008EFBE4 /* stackableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDF888C159A8F19008EFBE4 /* stackableCell.m */; };
+		BFDF8897159BA9EA008EFBE4 /* 8BALL.png in Resources */ = {isa = PBXBuildFile; fileRef = BFDF8896159BA9EA008EFBE4 /* 8BALL.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BFDF8889159A8E53008EFBE4 /* stackableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = stackableView.xib; sourceTree = "<group>"; };
 		BFDF888B159A8F19008EFBE4 /* stackableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stackableCell.h; sourceTree = "<group>"; };
 		BFDF888C159A8F19008EFBE4 /* stackableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stackableCell.m; sourceTree = "<group>"; };
+		BFDF8896159BA9EA008EFBE4 /* 8BALL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8BALL.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				BFDF887E159A8DAD008EFBE4 /* ViewController.h */,
 				BFDF887F159A8DAD008EFBE4 /* ViewController.m */,
 				BFDF8881159A8DAD008EFBE4 /* ViewController.xib */,
+				BFDF8896159BA9EA008EFBE4 /* 8BALL.png */,
 				BFDF8873159A8DAD008EFBE4 /* Supporting Files */,
 				BFDF8889159A8E53008EFBE4 /* stackableView.xib */,
 				BFDF888B159A8F19008EFBE4 /* stackableCell.h */,
@@ -159,6 +162,7 @@
 				BFDF8877159A8DAD008EFBE4 /* InfoPlist.strings in Resources */,
 				BFDF8883159A8DAD008EFBE4 /* ViewController.xib in Resources */,
 				BFDF888A159A8E53008EFBE4 /* stackableView.xib in Resources */,
+				BFDF8897159BA9EA008EFBE4 /* 8BALL.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +288,7 @@
 				BFDF8888159A8DAD008EFBE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

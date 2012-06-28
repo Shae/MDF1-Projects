@@ -11,6 +11,7 @@
 @implementation stackableCell
 @synthesize label;
 @synthesize image;
+@synthesize detailLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

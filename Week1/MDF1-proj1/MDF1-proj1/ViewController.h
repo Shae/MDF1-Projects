@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ViewController : UIViewController <UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
 {
     
     __weak IBOutlet UITableView *tableViewMain;
-    NSArray *myArray;
+    __weak IBOutlet UIButton *editBtn;
+    NSMutableArray *myArray;
+
 }
+- (IBAction)edit:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
+
 
 @end
