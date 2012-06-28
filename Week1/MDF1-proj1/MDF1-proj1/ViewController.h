@@ -18,7 +18,7 @@
     IBOutlet UIView *mainView;
     IBOutlet UIView *subView;
     IBOutlet UIButton *viewBtn;
-    IBOutlet UIButton *testBtn;
+
     
     IBOutlet UILabel *subLabel;
     IBOutlet UILabel *subSubLabel;

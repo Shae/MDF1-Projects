@@ -13,7 +13,9 @@
     IBOutlet UILabel *cellLabel;
     IBOutlet UIImageView *cellImage;
    // __weak IBOutlet UILabel *labelLabel;
+    __weak IBOutlet UIImageView *eachImage;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *eachImage;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;

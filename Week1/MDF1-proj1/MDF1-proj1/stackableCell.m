@@ -9,6 +9,7 @@
 #import "stackableCell.h"
 
 @implementation stackableCell
+@synthesize eachImage;
 @synthesize label;
 @synthesize image;
 @synthesize detailLabel;
