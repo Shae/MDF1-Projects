@@ -16,6 +16,11 @@
 @implementation ViewController
 @synthesize tableViewMain;
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    subView.frame = CGRectMake(-320.0f, 0.0f, subView.frame.size.width, subView.frame.size.height);
+}
+
 - (void)viewDidLoad
 {
     myArray = [[NSMutableArray alloc] initWithObjects:@"Aa", @"Bb", @"Cc", @"Dd", @"Ee", @"Ff", @"Gg", @"Hh", @"Ii", @"Jj", @"Kk", @"Ll", @"Mm", @"Nn", @"Oo", @"Pp", @"Qq", @"Rr", @"Ss", @"Tt",@"Uu", @"Vv", @"Ww", @"Xx", @"Yy", @"Zz", nil];
@@ -26,7 +31,11 @@
 
 - (void)viewDidUnload
 {
+
     orgMainViewFrame = mainView.frame;
+    orgSubViewFrame = subView.frame;
+    
+    
     [self setTableViewMain:nil];
     tableViewMain = nil;
     editBtn = nil;
@@ -100,14 +109,28 @@
 
 -(IBAction)back:(id)sender
 {
-    NSLog(@"boo");
+    [UIView beginAnimations:nil context:nil];
+    subView.frame = CGRectMake(-320.0f, 0.0f, subView.frame.size.width, subView.frame.size.height);
+    [UIView commitAnimations];
 }
 
 -(IBAction)digIN:(id)sender
 {
     [UIView beginAnimations:nil context:nil];
-    mainView.frame = CGRectMake(270.0f, 0.0f, mainView.frame.size.width, mainView.frame.size.height);
+    subView.frame = CGRectMake(0.0f, 0.0f, subView.frame.size.width, subView.frame.size.height);
+    
+    [UIView commitAnimations];
+
+}
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    subLabel.text =  [myArray objectAtIndex:indexPath.row];
+    subSubLabel.text =  [NSString stringWithFormat:@"This is a details label for object %@", [myArray objectAtIndex:indexPath.row]];
+    
+    
+    [UIView beginAnimations:nil context:nil];
+    subView.frame = CGRectMake(0.0f, 0.0f, subView.frame.size.width, subView.frame.size.height);
+    
     [UIView commitAnimations];
 }
-
 @end

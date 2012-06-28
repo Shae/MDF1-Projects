@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     
     __weak IBOutlet UITableView *tableViewMain;
@@ -20,10 +20,13 @@
     IBOutlet UIButton *viewBtn;
     IBOutlet UIButton *testBtn;
     
+    IBOutlet UILabel *subLabel;
+    IBOutlet UILabel *subSubLabel;
     CGRect orgMainViewFrame;
+    CGRect orgSubViewFrame;
 
 }
-- (IBAction)edit:(id)sender;
+-(IBAction)edit:(id)sender;
 -(IBAction)back:(id)sender;
 -(IBAction)digIN:(id)sender;
 
