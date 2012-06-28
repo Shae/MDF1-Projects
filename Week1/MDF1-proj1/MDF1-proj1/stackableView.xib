@@ -40,7 +40,7 @@
 						<reference key="NSNextResponder" ref="850102985"/>
 						<int key="NSvFlags">256</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="112222218">
+							<object class="IBUIImageView" id="729006310">
 								<reference key="NSNextResponder" ref="788504794"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{320, 69}</string>
@@ -72,7 +72,7 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MSAwLjUwMTk2MDgxNCAwAA</bytes>
 								</object>
-								<object class="NSColor" key="IBUIHighlightedColor" id="846584764">
+								<object class="NSColor" key="IBUIHighlightedColor" id="637160452">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
 								</object>
@@ -103,7 +103,7 @@
 									<string key="NSResourceName">8BALL.png</string>
 								</object>
 							</object>
-							<object class="IBUILabel" id="500280885">
+							<object class="IBUILabel" id="396554207">
 								<reference key="NSNextResponder" ref="788504794"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{72, 41}, {234, 21}}</string>
@@ -120,7 +120,7 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MSAxIDEAA</bytes>
 								</object>
-								<reference key="IBUIHighlightedColor" ref="846584764"/>
+								<reference key="IBUIHighlightedColor" ref="637160452"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
@@ -174,7 +174,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">detailLabel</string>
 						<reference key="source" ref="850102985"/>
-						<reference key="destination" ref="500280885"/>
+						<reference key="destination" ref="396554207"/>
 					</object>
 					<int key="connectionID">13</int>
 				</object>
@@ -218,9 +218,9 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="850102985"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="112222218"/>
+							<reference ref="729006310"/>
 							<reference ref="789442217"/>
-							<reference ref="500280885"/>
+							<reference ref="396554207"/>
 							<reference ref="962611462"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -232,12 +232,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">9</int>
-						<reference key="object" ref="112222218"/>
+						<reference key="object" ref="729006310"/>
 						<reference key="parent" ref="850102985"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="500280885"/>
+						<reference key="object" ref="396554207"/>
 						<reference key="parent" ref="850102985"/>
 					</object>
 					<object class="IBObjectRecord">
