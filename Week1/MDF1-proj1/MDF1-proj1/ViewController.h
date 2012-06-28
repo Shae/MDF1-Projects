@@ -18,7 +18,9 @@
     IBOutlet UIView *mainView;
     IBOutlet UIView *subView;
     IBOutlet UIButton *viewBtn;
+    __weak IBOutlet UIImageView *lrgIMG;
 
+    __weak IBOutlet UILabel *sentenceLabel;
     
     IBOutlet UILabel *subLabel;
     IBOutlet UILabel *subSubLabel;
@@ -29,8 +31,10 @@
 -(IBAction)edit:(id)sender;
 -(IBAction)back:(id)sender;
 -(IBAction)digIN:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *sentenceLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 
+@property (weak, nonatomic) IBOutlet UIImageView *lrgIMG;
 
 @end
