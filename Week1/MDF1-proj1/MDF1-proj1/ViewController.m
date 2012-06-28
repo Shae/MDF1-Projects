@@ -26,6 +26,7 @@
 
 - (void)viewDidUnload
 {
+    orgMainViewFrame = mainView.frame;
     [self setTableViewMain:nil];
     tableViewMain = nil;
     editBtn = nil;
@@ -64,7 +65,6 @@
         }
 
     }
-    //cell.textLabel.text = (NSString*) [myArray objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -73,23 +73,15 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         NSLog(@"we want to delete row = %d", indexPath.row);
-        //editBtn.titleLabel.text = @"Done";
         [ myArray removeObjectAtIndex:indexPath.row]; 
+        [tableViewMain deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
-/*
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated
-{
-    if (editing == NO){
-        [tableViewMain setEditing:YES ];
-    } if (editing == YES){
-        [tableViewMain setEditing:NO ];
-    }
-}*/
+
 
 - (IBAction)edit:(id)sender 
 {
-   //int btnClick = 0;
+
     NSLog(@"%@", editBtn.titleLabel.text);
     NSString * btnName = editBtn.titleLabel.text;
     
@@ -97,12 +89,25 @@
         NSLog(@"BOO");
         [tableViewMain setEditing:YES animated:YES];
         [sender setTitle:@"DONE" forState:UIControlStateNormal];
-        //btnClick = 1;
+
     } else if (btnName == @"DONE"){
         [tableViewMain setEditing:NO animated:YES];
         [sender setTitle:@"EDIT" forState:UIControlStateNormal];
-       // btnClick = 0;
+
     }
 
 }
+
+-(IBAction)back:(id)sender
+{
+    NSLog(@"boo");
+}
+
+-(IBAction)digIN:(id)sender
+{
+    [UIView beginAnimations:nil context:nil];
+    mainView.frame = CGRectMake(270.0f, 0.0f, mainView.frame.size.width, mainView.frame.size.height);
+    [UIView commitAnimations];
+}
+
 @end

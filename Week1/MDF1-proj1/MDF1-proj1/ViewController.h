@@ -15,9 +15,17 @@
     __weak IBOutlet UITableView *tableViewMain;
     __weak IBOutlet UIButton *editBtn;
     NSMutableArray *myArray;
+    IBOutlet UIView *mainView;
+    IBOutlet UIView *subView;
+    IBOutlet UIButton *viewBtn;
+    IBOutlet UIButton *testBtn;
+    
+    CGRect orgMainViewFrame;
 
 }
 - (IBAction)edit:(id)sender;
+-(IBAction)back:(id)sender;
+-(IBAction)digIN:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMain;
 
