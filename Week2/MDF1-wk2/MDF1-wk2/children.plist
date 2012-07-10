@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Children</key>
+	<array>
+		<dict>
+			<key>Notes</key>
+			<string>Afraid of banana seeds</string>
+			<key>Gender</key>
+			<string>Male</string>
+			<key>Age</key>
+			<integer>7</integer>
+			<key>Name</key>
+			<string>Tristen Michael</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Twin sister to Beth</string>
+			<key>Gender</key>
+			<string>Female</string>
+			<key>Age</key>
+			<integer>3</integer>
+			<key>Name</key>
+			<string>Alexi Reynor</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Twin sister to Alexi</string>
+			<key>Gender</key>
+			<string>Female</string>
+			<key>Age</key>
+			<integer>3</integer>
+			<key>Name</key>
+			<string>Beth Reynor</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Bites a lot</string>
+			<key>Gender</key>
+			<string>Male</string>
+			<key>Age</key>
+			<integer>2</integer>
+			<key>Name</key>
+			<string>Sam West</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Hates to wear his clothes </string>
+			<key>Gender</key>
+			<string>Male</string>
+			<key>Age</key>
+			<integer>3</integer>
+			<key>Name</key>
+			<string>Rudy Lime</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Allergic to Carrots</string>
+			<key>Gender</key>
+			<string>Female</string>
+			<key>Age</key>
+			<integer>7</integer>
+			<key>Name</key>
+			<string>Shela Little</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Loves to climb</string>
+			<key>Gender</key>
+			<string>Male</string>
+			<key>Age</key>
+			<integer>5</integer>
+			<key>Name</key>
+			<string>Adam Blue</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Can&apos;t walk</string>
+			<key>Gender</key>
+			<string>Male</string>
+			<key>Age</key>
+			<integer>6</integer>
+			<key>Name</key>
+			<string>Willie May</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Fears clowns</string>
+			<key>Gender</key>
+			<string>Female</string>
+			<key>Age</key>
+			<integer>4</integer>
+			<key>Name</key>
+			<string>Hailey Johnson</string>
+		</dict>
+		<dict>
+			<key>Notes</key>
+			<string>Hates Noodles</string>
+			<key>Gender</key>
+			<string>Male</string>
+			<key>Age</key>
+			<integer>2</integer>
+			<key>Name</key>
+			<string>Christopher Johnson</string>
+		</dict>
+	</array>
+</dict>
+</plist>

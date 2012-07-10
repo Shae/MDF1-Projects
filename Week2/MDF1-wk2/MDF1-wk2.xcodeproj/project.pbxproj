@@ -24,8 +24,9 @@
 		BFD9FC2D15ACBE3D004F3A9C /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9FC2B15ACBE3D004F3A9C /* ThirdViewController.m */; };
 		BFD9FC2E15ACBE3D004F3A9C /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC2C15ACBE3D004F3A9C /* ThirdViewController.xib */; };
 		BFD9FC3715ACCB90004F3A9C /* 8BALL.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC3615ACCB90004F3A9C /* 8BALL.png */; };
-		BFD9FC4015ACD1A5004F3A9C /* TableCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9FC3E15ACD1A4004F3A9C /* TableCellViewController.m */; };
 		BFD9FC4115ACD1A5004F3A9C /* TableCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC3F15ACD1A4004F3A9C /* TableCellViewController.xib */; };
+		BFD9FC4415ACD85F004F3A9C /* TableCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9FC4315ACD85F004F3A9C /* TableCellViewController.m */; };
+		BFD9FC4615ACE7CE004F3A9C /* children.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC4515ACE7CE004F3A9C /* children.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +54,10 @@
 		BFD9FC2B15ACBE3D004F3A9C /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThirdViewController.m; path = ../ThirdViewController.m; sourceTree = "<group>"; };
 		BFD9FC2C15ACBE3D004F3A9C /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ThirdViewController.xib; path = ../ThirdViewController.xib; sourceTree = "<group>"; };
 		BFD9FC3615ACCB90004F3A9C /* 8BALL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8BALL.png; sourceTree = "<group>"; };
-		BFD9FC3D15ACD1A4004F3A9C /* TableCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCellViewController.h; sourceTree = "<group>"; };
-		BFD9FC3E15ACD1A4004F3A9C /* TableCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCellViewController.m; sourceTree = "<group>"; };
 		BFD9FC3F15ACD1A4004F3A9C /* TableCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellViewController.xib; sourceTree = "<group>"; };
+		BFD9FC4215ACD85F004F3A9C /* TableCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCellViewController.h; sourceTree = "<group>"; };
+		BFD9FC4315ACD85F004F3A9C /* TableCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCellViewController.m; sourceTree = "<group>"; };
+		BFD9FC4515ACE7CE004F3A9C /* children.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = children.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +121,10 @@
 				BFD9FC2215ACBD88004F3A9C /* SecondViewController.xib */,
 				BFD9FC2C15ACBE3D004F3A9C /* ThirdViewController.xib */,
 				BFD9FC0615ACBD88004F3A9C /* Supporting Files */,
-				BFD9FC3D15ACD1A4004F3A9C /* TableCellViewController.h */,
-				BFD9FC3E15ACD1A4004F3A9C /* TableCellViewController.m */,
 				BFD9FC3F15ACD1A4004F3A9C /* TableCellViewController.xib */,
+				BFD9FC4215ACD85F004F3A9C /* TableCellViewController.h */,
+				BFD9FC4315ACD85F004F3A9C /* TableCellViewController.m */,
+				BFD9FC4515ACE7CE004F3A9C /* children.plist */,
 			);
 			path = "MDF1-wk2";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				BFD9FC2E15ACBE3D004F3A9C /* ThirdViewController.xib in Resources */,
 				BFD9FC3715ACCB90004F3A9C /* 8BALL.png in Resources */,
 				BFD9FC4115ACD1A5004F3A9C /* TableCellViewController.xib in Resources */,
+				BFD9FC4615ACE7CE004F3A9C /* children.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +216,7 @@
 				BFD9FC1315ACBD88004F3A9C /* FirstViewController.m in Sources */,
 				BFD9FC1A15ACBD88004F3A9C /* SecondViewController.m in Sources */,
 				BFD9FC2D15ACBE3D004F3A9C /* ThirdViewController.m in Sources */,
-				BFD9FC4015ACD1A5004F3A9C /* TableCellViewController.m in Sources */,
+				BFD9FC4415ACD85F004F3A9C /* TableCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
