@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *myArray;
+    __weak IBOutlet UITableView *table;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *table;
+
 
 @end
