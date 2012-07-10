@@ -13,6 +13,8 @@
 @end
 
 @implementation FirstViewController
+@synthesize moreInfoBtn;
+@synthesize backToMainBtn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,7 +25,12 @@
     }
     return self;
 }
-							
+	
+-(void)viewWillAppear:(BOOL)animated
+{
+        viewInfo.frame = CGRectMake(-320.0f, 0.0f, viewInfo.frame.size.width, viewInfo.frame.size.height);
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -32,6 +39,10 @@
 
 - (void)viewDidUnload
 {
+    [self setMoreInfoBtn:nil];
+    [self setBackToMainBtn:nil];
+    viewMain = nil;
+    viewInfo = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -40,5 +51,16 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+-(IBAction)moreBtn:(id)sender
+{
+    viewInfo.frame = CGRectMake(0.0f, 0.0f, viewInfo.frame.size.width, viewInfo.frame.size.height);
+}
+
+-(IBAction)backBtn:(id)sender
+{
+    viewInfo.frame = CGRectMake(-320.0f, 0.0f, viewInfo.frame.size.width, viewInfo.frame.size.height);
+}
+
 
 @end

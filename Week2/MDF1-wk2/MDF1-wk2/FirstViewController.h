@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+{
+    IBOutlet UIView *viewMain;
+    IBOutlet UIView *viewInfo;
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *moreInfoBtn;
+@property (weak, nonatomic) IBOutlet UIButton *backToMainBtn;
+
+-(IBAction)moreBtn:(id)sender;
+-(IBAction)backBtn:(id)sender;
 
 @end
