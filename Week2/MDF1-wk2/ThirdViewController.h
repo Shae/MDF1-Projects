@@ -24,5 +24,6 @@
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onChange:(id)sender;
+-(IBAction)submit:(id)sender;
 
 @end

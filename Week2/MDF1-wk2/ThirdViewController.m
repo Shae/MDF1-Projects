@@ -79,5 +79,21 @@
     int myVal = (int)[slideBar value];
     ageLabel.text = [NSString stringWithFormat:@"%d", myVal];
 }
+-(IBAction)submit:(id)sender
+{
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:
+                          @"Under Construction"
+                        message:
+                          @"This option is not currently available"
+                        delegate: 
+                          self 
+                        cancelButtonTitle:
+                          @"Close"
+                        otherButtonTitles: nil];
+    
+    [alert show];
 
+}
 @end
