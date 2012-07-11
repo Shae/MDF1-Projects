@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "TableCellViewController.h"
-//#import "children.plist"
+
 
 @interface SecondViewController ()
 
@@ -30,23 +30,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-       // myArray = [[NSMutableArray alloc] initWithObjects:@"Adam", @"Bryan", nil];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
+   // NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"children.plist"];
     NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:defaultPath];
     if (plistDictionary != nil)
     {
-        NSArray *array = [plistDictionary objectForKey:@"Children"];
-        if (array != nil)
+        myArray = [plistDictionary objectForKey:@"Children"];
+        if (myArray != nil)
         {
-            for (int i=0; i<[array count]; i++)
+            for (int i=0; i<[myArray count]; i++)
             {
-                NSDictionary *kidDictionary = [array objectAtIndex:i];
+                NSDictionary *kidDictionary = [myArray objectAtIndex:i];
                 NSLog(@"child# %d name = %@", i, [kidDictionary objectForKey:@"Name"]);            
             }
         }   
     }
-    //kidList = [[NSDictionary alloc] initWithContentsOfFile:@"children.plist"];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -66,7 +64,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [myArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,12 +72,19 @@
     static NSString *CellIdentifier = @"Cell";
     
     TableCellViewController *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
     if (cell == nil)
     {
         NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"TableCellViewController" owner:nil options:nil];
         for (UIView *view in views)
         {
+            if([view isKindOfClass:[TableCellViewController class]])
+            {
                 cell = (TableCellViewController*) view;
+               // NSDictionary *kidDictionary = [myArray objectAtIndex:indexPath.row];
+                //cell.label.text = [kidDictionary objectForKey:@"Name"];
+            }
+               
         }
     }
     return cell;

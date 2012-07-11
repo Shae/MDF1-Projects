@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TableCellViewController : UITableViewCell
+{
+
+
+    
+}
 
 @end

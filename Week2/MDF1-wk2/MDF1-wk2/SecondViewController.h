@@ -10,8 +10,8 @@
 
 @interface SecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-    NSMutableArray *myArray;
-    NSDictionary *kidList;
+    NSArray *myArray;
+    
     __weak IBOutlet UITableView *table;
 }
 
