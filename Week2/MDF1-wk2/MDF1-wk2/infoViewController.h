@@ -13,5 +13,8 @@
     __weak IBOutlet UILabel *label1;
     __weak IBOutlet UILabel *label2;
     __weak IBOutlet UILabel *label3;
+    NSDictionary *itemDict;
 }
+
+@property (nonatomic, strong) NSDictionary *itemDict;
 @end

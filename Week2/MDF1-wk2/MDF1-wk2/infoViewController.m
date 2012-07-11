@@ -27,7 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    label1.text = [itemDict objectForKey:@"Name"] ;
+    label2.text = [itemDict objectForKey:@"Gender"];
+    label3.text = [itemDict objectForKey:@"Age"];
+
 }
+
 
 - (void)viewDidUnload
 {

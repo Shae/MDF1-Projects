@@ -79,16 +79,17 @@
     if (cell == nil)
     {
         NSArray* views = [[NSBundle mainBundle] loadNibNamed:@"TableCellViewController" owner:nil options:nil];
+        
         for (UIView *view in views)
         {
             if([view isKindOfClass:[TableCellViewController class]])
             {
                 cell = (TableCellViewController*) view;
-                cell.myLabel.text = @"hello";
-               // NSDictionary *kidDictionary = [myArray objectAtIndex:indexPath.row];
-                //cell.label.text = [kidDictionary objectForKey:@"Name"];
+
+                NSDictionary *kidDictionary = [myArray objectAtIndex:indexPath.row];
+                cell.myLabel.text = [kidDictionary objectForKey:@"Name"];
             }
-               
+
         }
     }
     return cell;
@@ -102,6 +103,9 @@
     {
         // to track the item touched since i cant get the labels to work right now
         selectedItem = indexPath.row;
+       // infoViewController.itemDict = [myArray objectAtIndex:indexPath.row];
+        infoView.itemDict = [myArray objectAtIndex:indexPath.row];
+        
         NSLog(@"You selected index position %d", selectedItem);
         
         // swap views
@@ -109,6 +113,7 @@
     }
 
 }
+
 
 
 @end
