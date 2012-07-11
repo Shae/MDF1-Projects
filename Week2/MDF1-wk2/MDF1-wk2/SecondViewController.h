@@ -11,6 +11,7 @@
 @interface SecondViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     NSArray *myArray;
+    int selectedItem;
     
     __weak IBOutlet UITableView *table;
 }

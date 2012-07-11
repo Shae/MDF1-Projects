@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+@interface ThirdViewController : UIViewController <UITextFieldDelegate>
+{
+    
+
+    __weak IBOutlet UISlider *slideBar;
+    __weak IBOutlet UITextField *ageLabel;
+    __weak IBOutlet UITextField *name;
+
+    __weak IBOutlet UITextField *notes;
+}
+
+@property (strong, nonatomic) IBOutlet UIView *myView;
+@property (weak, nonatomic) IBOutlet UIButton *BG;
+
+-(IBAction)onClick:(id)sender;
+-(IBAction)onChange:(id)sender;
 
 @end

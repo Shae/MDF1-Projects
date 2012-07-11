@@ -14,6 +14,10 @@
 
 @implementation ThirdViewController
 
+@synthesize myView;
+@synthesize BG;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,6 +36,17 @@
 
 - (void)viewDidUnload
 {
+    name = nil;
+
+    notes = nil;
+
+
+
+    [self setMyView:nil];
+
+    [self setBG:nil];
+    ageLabel = nil;
+    slideBar = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -40,6 +55,29 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(IBAction)onClick:(id)sender
+{
+    [name resignFirstResponder];
+
+    [notes resignFirstResponder];
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    [name resignFirstResponder];
+
+    [notes resignFirstResponder];
+    return YES;
+}
+
+-(IBAction)onChange:(id)sender
+{
+    int myVal = (int)[slideBar value];
+    ageLabel.text = [NSString stringWithFormat:@"%d", myVal];
 }
 
 @end

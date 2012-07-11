@@ -97,6 +97,11 @@
     infoViewController *infoView = [[infoViewController alloc] initWithNibName:@"infoViewController" bundle:nil];
     if (selection != nil)
     {
+        // to track the item touched since i cant get the labels to work right now
+        selectedItem = indexPath.row;
+        NSLog(@"You selected index position %d", selectedItem);
+        
+        // swap views
         [self.navigationController pushViewController:infoView animated:TRUE];
     }
 
