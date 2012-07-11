@@ -23,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Third", @"Third");
+        self.title = NSLocalizedString(@"Add Child", @"Add Child");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;

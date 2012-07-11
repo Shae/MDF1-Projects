@@ -13,6 +13,7 @@
 @end
 
 @implementation infoViewController
+@synthesize itemDict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,8 +30,10 @@
     // Do any additional setup after loading the view from its nib.
 
     label1.text = [itemDict objectForKey:@"Name"] ;
+    NSNumber *ageNum = [itemDict objectForKey:@"Age"];
+    label3.text = [ageNum description];
     label2.text = [itemDict objectForKey:@"Gender"];
-    label3.text = [itemDict objectForKey:@"Age"];
+    
 
 }
 
