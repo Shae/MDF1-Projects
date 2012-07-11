@@ -12,7 +12,7 @@
 {
     NSArray *myArray;
     int selectedItem;
-    
+    NSString *plistAddress;
     __weak IBOutlet UITableView *table;
 }
 

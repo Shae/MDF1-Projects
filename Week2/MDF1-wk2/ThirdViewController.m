@@ -16,6 +16,7 @@
 
 @synthesize myView;
 @synthesize BG;
+@synthesize nameField;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,6 +33,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    // Find plist address
+    NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"children.plist"];
+    plistAddress = [NSString stringWithFormat:@"%@", defaultPath];
 }
 
 - (void)viewDidUnload
@@ -47,6 +53,7 @@
     [self setBG:nil];
     ageLabel = nil;
     slideBar = nil;
+    [self setNameField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -81,8 +88,6 @@
 }
 -(IBAction)submit:(id)sender
 {
-    
-    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:
                           @"Under Construction"
                         message:
@@ -94,6 +99,18 @@
                         otherButtonTitles: nil];
     
     [alert show];
+}
 
+
+
+- (void)writeToPlist
+{
+    NSString *filePath = plistAddress;
+    NSMutableDictionary* plistDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    NSString *myName = self.nameField.text;
+    [plistDict setValue: myName forKey: @"Name"];
+    [plistDict writeToFile:filePath atomically: YES];
+    
+    /* This would change the firmware version in the plist to 1.1.1 by initing the NSDictionary with the plist, then changing the value of the string in the key "ProductVersion" to what you specified */
 }
 @end

@@ -32,6 +32,8 @@
     [super viewDidLoad];
    // NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"children.plist"];
+    plistAddress = [NSString stringWithFormat:@"%@", defaultPath];
+    
     NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:defaultPath];
     if (plistDictionary != nil)
     {
@@ -82,6 +84,7 @@
             if([view isKindOfClass:[TableCellViewController class]])
             {
                 cell = (TableCellViewController*) view;
+                cell.myLabel.text = @"hello";
                // NSDictionary *kidDictionary = [myArray objectAtIndex:indexPath.row];
                 //cell.label.text = [kidDictionary objectForKey:@"Name"];
             }

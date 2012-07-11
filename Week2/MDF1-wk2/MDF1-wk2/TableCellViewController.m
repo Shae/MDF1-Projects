@@ -9,6 +9,7 @@
 #import "TableCellViewController.h"
 
 @implementation TableCellViewController
+@synthesize myLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

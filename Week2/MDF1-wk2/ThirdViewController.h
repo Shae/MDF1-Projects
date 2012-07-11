@@ -15,15 +15,16 @@
     __weak IBOutlet UISlider *slideBar;
     __weak IBOutlet UITextField *ageLabel;
     __weak IBOutlet UITextField *name;
-
     __weak IBOutlet UITextField *notes;
+    NSString *plistAddress;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *myView;
 @property (weak, nonatomic) IBOutlet UIButton *BG;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
 
 -(IBAction)onClick:(id)sender;
 -(IBAction)onChange:(id)sender;
 -(IBAction)submit:(id)sender;
-
+- (void)writeToPlist;
 @end
