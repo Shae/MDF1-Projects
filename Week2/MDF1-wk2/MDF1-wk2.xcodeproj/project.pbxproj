@@ -27,6 +27,8 @@
 		BFD9FC4115ACD1A5004F3A9C /* TableCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC3F15ACD1A4004F3A9C /* TableCellViewController.xib */; };
 		BFD9FC4415ACD85F004F3A9C /* TableCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9FC4315ACD85F004F3A9C /* TableCellViewController.m */; };
 		BFD9FC4615ACE7CE004F3A9C /* children.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC4515ACE7CE004F3A9C /* children.plist */; };
+		BFD9FC4C15AD5A24004F3A9C /* infoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD9FC4A15AD5A24004F3A9C /* infoViewController.m */; };
+		BFD9FC4D15AD5A24004F3A9C /* infoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFD9FC4B15AD5A24004F3A9C /* infoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,9 @@
 		BFD9FC4215ACD85F004F3A9C /* TableCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCellViewController.h; sourceTree = "<group>"; };
 		BFD9FC4315ACD85F004F3A9C /* TableCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCellViewController.m; sourceTree = "<group>"; };
 		BFD9FC4515ACE7CE004F3A9C /* children.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = children.plist; sourceTree = "<group>"; };
+		BFD9FC4915AD5A24004F3A9C /* infoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoViewController.h; sourceTree = "<group>"; };
+		BFD9FC4A15AD5A24004F3A9C /* infoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoViewController.m; sourceTree = "<group>"; };
+		BFD9FC4B15AD5A24004F3A9C /* infoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,9 @@
 				BFD9FC4215ACD85F004F3A9C /* TableCellViewController.h */,
 				BFD9FC4315ACD85F004F3A9C /* TableCellViewController.m */,
 				BFD9FC4515ACE7CE004F3A9C /* children.plist */,
+				BFD9FC4915AD5A24004F3A9C /* infoViewController.h */,
+				BFD9FC4A15AD5A24004F3A9C /* infoViewController.m */,
+				BFD9FC4B15AD5A24004F3A9C /* infoViewController.xib */,
 			);
 			path = "MDF1-wk2";
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 				BFD9FC3715ACCB90004F3A9C /* 8BALL.png in Resources */,
 				BFD9FC4115ACD1A5004F3A9C /* TableCellViewController.xib in Resources */,
 				BFD9FC4615ACE7CE004F3A9C /* children.plist in Resources */,
+				BFD9FC4D15AD5A24004F3A9C /* infoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +226,7 @@
 				BFD9FC1A15ACBD88004F3A9C /* SecondViewController.m in Sources */,
 				BFD9FC2D15ACBE3D004F3A9C /* ThirdViewController.m in Sources */,
 				BFD9FC4415ACD85F004F3A9C /* TableCellViewController.m in Sources */,
+				BFD9FC4C15AD5A24004F3A9C /* infoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

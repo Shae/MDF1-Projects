@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "TableCellViewController.h"
-
+#import "infoViewController.h"
 
 @interface SecondViewController ()
 
@@ -41,7 +41,8 @@
             for (int i=0; i<[myArray count]; i++)
             {
                 NSDictionary *kidDictionary = [myArray objectAtIndex:i];
-                NSLog(@"child# %d name = %@", i, [kidDictionary objectForKey:@"Name"]);            
+                NSLog(@"child# %d name = %@", i, [kidDictionary objectForKey:@"Name"]);    
+                NSLog(@"%@ is a %@ year old %@", [kidDictionary objectForKey:@"Name"], [kidDictionary objectForKey:@"Age"], [kidDictionary objectForKey:@"Gender"]);
             }
         }   
     }
@@ -90,6 +91,16 @@
     return cell;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *selection = [myArray objectAtIndex:indexPath.row];
+    infoViewController *infoView = [[infoViewController alloc] initWithNibName:@"infoViewController" bundle:nil];
+    if (selection != nil)
+    {
+        [self.navigationController pushViewController:infoView animated:TRUE];
+    }
+
+}
 
 
 @end
