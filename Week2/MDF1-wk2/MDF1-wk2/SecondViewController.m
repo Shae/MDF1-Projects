@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "TableCellViewController.h"
-
+//#import "children.plist"
 
 @interface SecondViewController ()
 
@@ -30,7 +30,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        myArray = [[NSMutableArray alloc] initWithObjects:@"Adam", @"Bryan", nil];
+       // myArray = [[NSMutableArray alloc] initWithObjects:@"Adam", @"Bryan", nil];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"children.plist"];
+    NSDictionary *plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:defaultPath];
+    if (plistDictionary != nil)
+    {
+        NSArray *array = [plistDictionary objectForKey:@"Children"];
+        if (array != nil)
+        {
+            for (int i=0; i<[array count]; i++)
+            {
+                NSDictionary *kidDictionary = [array objectAtIndex:i];
+                NSLog(@"child# %d name = %@", i, [kidDictionary objectForKey:@"Name"]);            
+            }
+        }   
+    }
+    //kidList = [[NSDictionary alloc] initWithContentsOfFile:@"children.plist"];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -49,7 +66,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [myArray count];
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
