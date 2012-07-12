@@ -21,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"About", @"About");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"tab1"];
     }
     return self;
 }
@@ -29,6 +29,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
         viewInfo.frame = CGRectMake(-320.0f, 0.0f, viewInfo.frame.size.width, viewInfo.frame.size.height);
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kid-KoderBG.png"]];
+    viewInfo.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kid-KoderBG.png"]];
 }
 
 - (void)viewDidLoad

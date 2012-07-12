@@ -21,8 +21,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Children", @"Children");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.title = NSLocalizedString(@"Child List", @"Child List");
+        self.tabBarItem.image = [UIImage imageNamed:@"tab2"];
     }
     return self;
 }
@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
    // NSFileManager *fileManager = [NSFileManager defaultManager];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kid-KoderBG.png"]];
+    
     NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"children.plist"];
     plistAddress = [NSString stringWithFormat:@"%@", defaultPath];
     
@@ -85,9 +87,19 @@
             if([view isKindOfClass:[TableCellViewController class]])
             {
                 cell = (TableCellViewController*) view;
-
+                // setting cell label
                 NSDictionary *kidDictionary = [myArray objectAtIndex:indexPath.row];
                 cell.myLabel.text = [kidDictionary objectForKey:@"Name"];
+                
+                ////  gender Check for icon
+                NSString *gender = [kidDictionary objectForKey:@"Gender"];
+                //NSString *gendCheck = [NSString stringWithFormat:@"Male"];
+                if ([gender isEqualToString:@"Male"])
+                {
+                    cell.genderIcon.image = [UIImage imageNamed:@"male2"];
+                }else{
+                    cell.genderIcon.image = [UIImage imageNamed:@"female2"];
+                }
             }
 
         }

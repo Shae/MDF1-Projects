@@ -24,7 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Add Child", @"Add Child");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"tab3"];
     }
     return self;
 }
@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kid-KoderBG.png"]];
     
     // Find plist address
     NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"children.plist"];
@@ -102,7 +102,7 @@
 }
 
 
-
+/*
 - (void)writeToPlist
 {
     NSString *filePath = plistAddress;
@@ -111,6 +111,6 @@
     [plistDict setValue: myName forKey: @"Name"];
     [plistDict writeToFile:filePath atomically: YES];
     
-    /* This would change the firmware version in the plist to 1.1.1 by initing the NSDictionary with the plist, then changing the value of the string in the key "ProductVersion" to what you specified */
-}
+    // This would change the firmware version in the plist to 1.1.1 by initing the NSDictionary with the plist, then //changing the value of the string in the key "ProductVersion" to what you specified 
+}*/
 @end

@@ -10,11 +10,16 @@
 
 @interface infoViewController : UIViewController
 {
+    __weak IBOutlet UILabel *mainLabel;
     __weak IBOutlet UILabel *label1;
     __weak IBOutlet UILabel *label2;
     __weak IBOutlet UILabel *label3;
     NSDictionary *itemDict;
+
+    __weak IBOutlet UIButton *photo;
 }
 
+
 @property (nonatomic, strong) NSDictionary *itemDict;
+-(IBAction)submit:(id)sender;
 @end

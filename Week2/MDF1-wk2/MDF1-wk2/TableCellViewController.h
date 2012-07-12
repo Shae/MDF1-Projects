@@ -11,10 +11,12 @@
 @interface TableCellViewController : UITableViewCell
 {
 
+    __weak IBOutlet UIImageView *genderIcon;
     __weak IBOutlet UILabel *myLabel;
 
     
 }
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *genderIcon;
 
 @end

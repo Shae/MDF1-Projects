@@ -13,6 +13,7 @@
 @end
 
 @implementation infoViewController
+
 @synthesize itemDict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -23,17 +24,28 @@
     }
     return self;
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Kid-KoderBG.png"]];}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
-    label1.text = [itemDict objectForKey:@"Name"] ;
+   
+    mainLabel.text = [itemDict objectForKey:@"Name"];
+    label1.text = [itemDict objectForKey:@"Gender"];
     NSNumber *ageNum = [itemDict objectForKey:@"Age"];
-    label3.text = [ageNum description];
-    label2.text = [itemDict objectForKey:@"Gender"];
+    label2.text = [ageNum description];
+    label3.text = [itemDict objectForKey:@"Notes"];
     
+    NSString *gender = [itemDict objectForKey:@"Gender"];
+    if ([gender isEqualToString:@"Male"])
+    {
+        mainLabel.textColor = [UIColor colorWithRed: 30.0/255.0 green: 144.0/255.0 blue:255.0/255.0 alpha: 1.0];
+    }else{
+         mainLabel.textColor = [UIColor magentaColor];
+    }
 
 }
 
@@ -43,6 +55,9 @@
     label1 = nil;
     label2 = nil;
     label3 = nil;
+    mainLabel = nil;
+
+    photo = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -53,4 +68,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(IBAction)submit:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] 
+                        initWithTitle:
+                          @"Under Construction"
+                        message:
+                          @"Photos will be availailable shortly"
+                        delegate: 
+                          self 
+                        cancelButtonTitle:
+                          @"Close"
+                        otherButtonTitles: nil];
+    
+    [alert show];
+}
 @end

@@ -26,5 +26,5 @@
 -(IBAction)onClick:(id)sender;
 -(IBAction)onChange:(id)sender;
 -(IBAction)submit:(id)sender;
-- (void)writeToPlist;
+//- (void)writeToPlist;
 @end

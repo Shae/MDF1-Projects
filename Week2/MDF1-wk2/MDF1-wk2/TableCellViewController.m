@@ -10,6 +10,7 @@
 
 @implementation TableCellViewController
 @synthesize myLabel;
+@synthesize genderIcon;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
