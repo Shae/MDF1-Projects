@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>list</key>
+	<array>
+		<dict>
+			<key>latLoc</key>
+			<real>-51.65</real>
+			<key>longLoc</key>
+			<real>31.9</real>
+			<key>Notes</key>
+			<string>This store carries over 75 types of apples</string>
+			<key>Name</key>
+			<string>Allens Apple Store</string>
+		</dict>
+		<dict>
+			<key>latLoc</key>
+			<real>-51.7</real>
+			<key>longLoc</key>
+			<real>31.02</real>
+			<key>Notes</key>
+			<string>He builds bikes from recycled plastic bottles</string>
+			<key>Name</key>
+			<string>Brandon&apos;s Bikes</string>
+		</dict>
+		<dict>
+			<key>latLoc</key>
+			<real>-51.6</real>
+			<key>longLoc</key>
+			<real>31.08</real>
+			<key>Notes</key>
+			<string>The best cooked cats in all of America</string>
+			<key>Name</key>
+			<string>Carol&apos;s Cook House</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    NSString *businessName;
-    NSString *longitude;
-    NSNumber *latitude;
-    
+    NSArray *businessArray;
+    NSString *plistAddress;
+    __weak IBOutlet UITableView *businessTable;
 }
+@property (weak, nonatomic) IBOutlet UITableView *BusinessTable;
 @end
