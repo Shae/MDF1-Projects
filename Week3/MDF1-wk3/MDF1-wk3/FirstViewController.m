@@ -39,7 +39,9 @@
     plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:defaultPath];
     if (plistDictionary != nil)
     {
-        businessArray = [plistDictionary objectForKey:@"list"];
+        //Bringing in a NSArray from a plist into a NSMutableArray
+        businessArray = [NSMutableArray arrayWithArray:[plistDictionary objectForKey:@"list"]];
+        
         if (businessArray != nil)
         {
             for (int i=0; i<[businessArray count]; i++)
@@ -130,9 +132,13 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         NSLog(@"we want to delete row = %d", indexPath.row);
-
-        [businessTable deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [businessArray removeObjectAtIndex:indexPath.row]; 
+          [businessTable beginUpdates];        
+        [businessArray removeObjectAtIndex:indexPath.row];         
+        //[businessTable deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+      
+        [businessTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [businessTable endUpdates];
     }
 }
 
