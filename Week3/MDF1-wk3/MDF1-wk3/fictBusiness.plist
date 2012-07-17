@@ -6,9 +6,9 @@
 	<array>
 		<dict>
 			<key>latLoc</key>
-			<real>-51.65</real>
+			<real>47.2153</real>
 			<key>longLoc</key>
-			<real>31.9</real>
+			<real>123.0994</real>
 			<key>Notes</key>
 			<string>This store carries over 75 types of apples</string>
 			<key>Name</key>
@@ -16,9 +16,9 @@
 		</dict>
 		<dict>
 			<key>latLoc</key>
-			<real>-51.7</real>
+			<real>47.214</real>
 			<key>longLoc</key>
-			<real>31.02</real>
+			<real>123.099</real>
 			<key>Notes</key>
 			<string>He builds bikes from recycled plastic bottles</string>
 			<key>Name</key>
@@ -26,9 +26,9 @@
 		</dict>
 		<dict>
 			<key>latLoc</key>
-			<real>-51.6</real>
+			<real>47.21</real>
 			<key>longLoc</key>
-			<real>31.08</real>
+			<real>123.04</real>
 			<key>Notes</key>
 			<string>The best cooked cats in all of America</string>
 			<key>Name</key>

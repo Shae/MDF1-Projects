@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "TableViewCellController.h"
+#import "businessInfoViewViewController.h"
 
 @interface FirstViewController ()
 
@@ -39,7 +40,7 @@
     plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:defaultPath];
     if (plistDictionary != nil)
     {
-        //Bringing in a NSArray from a plist into a NSMutableArray
+        //Bringing in a NSArray from a plist and turn it into a NSMutableArray
         businessArray = [NSMutableArray arrayWithArray:[plistDictionary objectForKey:@"list"]];
         
         if (businessArray != nil)
@@ -48,15 +49,16 @@
             {
                 NSDictionary *BusinessDictionary = [businessArray objectAtIndex:i];
                 NSLog(@"Company #%d: %@", i, [BusinessDictionary objectForKey:@"Name"]);    
-          /*      NSLog(@"Notes: %@", [BusinessDictionary objectForKey:@"Notes"]);
+                //NSLog(@"Notes: %@", [BusinessDictionary objectForKey:@"Notes"]);
                 NSLog(@"Longitude: %@", [BusinessDictionary objectForKey:@"longLoc"]);
                 NSLog(@"Latitude: %@", [BusinessDictionary objectForKey:@"latLoc"]);
-                NSLog(@"------------"); */
+                NSLog(@"------------"); 
                 
             }
         }   
     }
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [businessArray count];
@@ -91,15 +93,17 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *selection = [businessArray objectAtIndex:indexPath.row];
+    businessInfoViewViewController *infoView = [[businessInfoViewViewController alloc] initWithNibName:@"businessInfoViewViewController" bundle:nil];
       if (selection != nil)
     {
         // to track the item touched since i cant get the labels to work right now
         selectedItem = indexPath.row;
+         NSLog(@"You selected index position %d", selectedItem);
         
-        NSLog(@"You selected index position %d", selectedItem);
-
+        // passing dictionary object to other view
+        infoView.itemPassedIn = [businessArray objectAtIndex:indexPath.row];
     }
-    
+    [self.navigationController pushViewController:infoView animated:TRUE];
 }
 
 - (void)viewDidUnload

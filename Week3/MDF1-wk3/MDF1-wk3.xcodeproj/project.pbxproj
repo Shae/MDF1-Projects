@@ -24,6 +24,9 @@
 		BF8A019D15B4BD7D00CED077 /* fictBusiness.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8A019C15B4BD7D00CED077 /* fictBusiness.plist */; };
 		BF8A01AB15B4CBCD00CED077 /* CellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01AA15B4CBCD00CED077 /* CellViewController.xib */; };
 		BF8A01AE15B4CEC200CED077 /* TableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01AD15B4CEC200CED077 /* TableViewCellController.m */; };
+		BF8A01B615B5E4E400CED077 /* businessInfoViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01B415B5E4E300CED077 /* businessInfoViewViewController.m */; };
+		BF8A01B715B5E4E400CED077 /* businessInfoViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */; };
+		BF8A01B915B5E5F100CED077 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01B815B5E5F100CED077 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,10 @@
 		BF8A01AA15B4CBCD00CED077 /* CellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellViewController.xib; sourceTree = "<group>"; };
 		BF8A01AC15B4CEC100CED077 /* TableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellController.h; sourceTree = "<group>"; };
 		BF8A01AD15B4CEC200CED077 /* TableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellController.m; sourceTree = "<group>"; };
+		BF8A01B315B5E4E300CED077 /* businessInfoViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = businessInfoViewViewController.h; sourceTree = "<group>"; };
+		BF8A01B415B5E4E300CED077 /* businessInfoViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessInfoViewViewController.m; sourceTree = "<group>"; };
+		BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = businessInfoViewViewController.xib; sourceTree = "<group>"; };
+		BF8A01B815B5E5F100CED077 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8A01B915B5E5F100CED077 /* MapKit.framework in Frameworks */,
 				BF8A016D15B4AFD300CED077 /* UIKit.framework in Frameworks */,
 				BF8A016F15B4AFD300CED077 /* Foundation.framework in Frameworks */,
 				BF8A017115B4AFD300CED077 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +95,7 @@
 		BF8A016B15B4AFD300CED077 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF8A01B815B5E5F100CED077 /* MapKit.framework */,
 				BF8A016C15B4AFD300CED077 /* UIKit.framework */,
 				BF8A016E15B4AFD300CED077 /* Foundation.framework */,
 				BF8A017015B4AFD300CED077 /* CoreGraphics.framework */,
@@ -110,10 +119,12 @@
 				BF8A018815B4AFD300CED077 /* second.png */,
 				BF8A018A15B4AFD300CED077 /* second@2x.png */,
 				BF8A017315B4AFD300CED077 /* Supporting Files */,
-				BF8A019C15B4BD7D00CED077 /* fictBusiness.plist */,
 				BF8A01AA15B4CBCD00CED077 /* CellViewController.xib */,
 				BF8A01AC15B4CEC100CED077 /* TableViewCellController.h */,
 				BF8A01AD15B4CEC200CED077 /* TableViewCellController.m */,
+				BF8A01B315B5E4E300CED077 /* businessInfoViewViewController.h */,
+				BF8A01B415B5E4E300CED077 /* businessInfoViewViewController.m */,
+				BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */,
 			);
 			path = "MDF1-wk3";
 			sourceTree = "<group>";
@@ -121,6 +132,7 @@
 		BF8A017315B4AFD300CED077 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF8A019C15B4BD7D00CED077 /* fictBusiness.plist */,
 				BF8A017415B4AFD300CED077 /* MDF1-wk3-Info.plist */,
 				BF8A017515B4AFD300CED077 /* InfoPlist.strings */,
 				BF8A017815B4AFD300CED077 /* main.m */,
@@ -188,6 +200,7 @@
 				BF8A019115B4AFD300CED077 /* SecondViewController.xib in Resources */,
 				BF8A019D15B4BD7D00CED077 /* fictBusiness.plist in Resources */,
 				BF8A01AB15B4CBCD00CED077 /* CellViewController.xib in Resources */,
+				BF8A01B715B5E4E400CED077 /* businessInfoViewViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +216,7 @@
 				BF8A018015B4AFD300CED077 /* FirstViewController.m in Sources */,
 				BF8A018715B4AFD300CED077 /* SecondViewController.m in Sources */,
 				BF8A01AE15B4CEC200CED077 /* TableViewCellController.m in Sources */,
+				BF8A01B615B5E4E400CED077 /* businessInfoViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
