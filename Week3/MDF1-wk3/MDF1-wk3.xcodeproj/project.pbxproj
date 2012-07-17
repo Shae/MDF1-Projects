@@ -27,6 +27,7 @@
 		BF8A01B615B5E4E400CED077 /* businessInfoViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01B415B5E4E300CED077 /* businessInfoViewViewController.m */; };
 		BF8A01B715B5E4E400CED077 /* businessInfoViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */; };
 		BF8A01B915B5E5F100CED077 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8A01B815B5E5F100CED077 /* MapKit.framework */; };
+		BF8A01BC15B625C800CED077 /* myMapAnno.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8A01BB15B625C700CED077 /* myMapAnno.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		BF8A01B415B5E4E300CED077 /* businessInfoViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessInfoViewViewController.m; sourceTree = "<group>"; };
 		BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = businessInfoViewViewController.xib; sourceTree = "<group>"; };
 		BF8A01B815B5E5F100CED077 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BF8A01BA15B625C700CED077 /* myMapAnno.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myMapAnno.h; sourceTree = "<group>"; };
+		BF8A01BB15B625C700CED077 /* myMapAnno.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myMapAnno.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				BF8A01B315B5E4E300CED077 /* businessInfoViewViewController.h */,
 				BF8A01B415B5E4E300CED077 /* businessInfoViewViewController.m */,
 				BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */,
+				BF8A01BA15B625C700CED077 /* myMapAnno.h */,
+				BF8A01BB15B625C700CED077 /* myMapAnno.m */,
 			);
 			path = "MDF1-wk3";
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				BF8A018715B4AFD300CED077 /* SecondViewController.m in Sources */,
 				BF8A01AE15B4CEC200CED077 /* TableViewCellController.m in Sources */,
 				BF8A01B615B5E4E400CED077 /* businessInfoViewViewController.m in Sources */,
+				BF8A01BC15B625C800CED077 /* myMapAnno.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

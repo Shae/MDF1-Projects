@@ -5,10 +5,106 @@
 	<key>list</key>
 	<array>
 		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.1</real>
+			<key>longLoc</key>
+			<real>-123.2</real>
+			<key>Notes</key>
+			<string>Leftovers for the poor</string>
+			<key>Name</key>
+			<string>Reheat and Eat</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.25</real>
+			<key>longLoc</key>
+			<real>-123.15</real>
+			<key>Notes</key>
+			<string>Nap time is only a store away</string>
+			<key>Name</key>
+			<string>Mattress King</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.3</real>
+			<key>longLoc</key>
+			<real>-123.049</real>
+			<key>Notes</key>
+			<string>When life give you lemons... Make lemonade!</string>
+			<key>Name</key>
+			<string>Lemonade Lucy</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.2007</real>
+			<key>longLoc</key>
+			<real>-123.04007</real>
+			<key>Notes</key>
+			<string>It tastes like chicken, so it&apos;s chicken.</string>
+			<key>Name</key>
+			<string>Fried Chicken Fred&apos;s</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.2</real>
+			<key>longLoc</key>
+			<real>-122.9</real>
+			<key>Notes</key>
+			<string>Fight your friends for free</string>
+			<key>Name</key>
+			<string>Ricks Ring of Doom</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.22222</real>
+			<key>longLoc</key>
+			<real>-123.14444</real>
+			<key>Notes</key>
+			<string>The best car repair store in 7 miles</string>
+			<key>Name</key>
+			<string>Hank&apos;s Car Repair Shop</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.23</real>
+			<key>longLoc</key>
+			<real>-123.5</real>
+			<key>Notes</key>
+			<string>Sweets are the devils work</string>
+			<key>Name</key>
+			<string>Darkside Candy</string>
+		</dict>
+		<dict>
+			<key>New item</key>
+			<string></string>
+			<key>latLoc</key>
+			<real>47.121212</real>
+			<key>longLoc</key>
+			<real>-123.5413</real>
+			<key>Notes</key>
+			<string>A Pirate Hunters Hidout</string>
+			<key>Name</key>
+			<string>Not Really Here</string>
+		</dict>
+		<dict>
 			<key>latLoc</key>
 			<real>47.2153</real>
 			<key>longLoc</key>
-			<real>123.0994</real>
+			<real>-123.0994</real>
 			<key>Notes</key>
 			<string>This store carries over 75 types of apples</string>
 			<key>Name</key>
@@ -18,17 +114,19 @@
 			<key>latLoc</key>
 			<real>47.214</real>
 			<key>longLoc</key>
-			<real>123.099</real>
+			<real>-123.099</real>
 			<key>Notes</key>
 			<string>He builds bikes from recycled plastic bottles</string>
 			<key>Name</key>
 			<string>Brandon&apos;s Bikes</string>
 		</dict>
 		<dict>
+			<key>New item</key>
+			<string></string>
 			<key>latLoc</key>
 			<real>47.21</real>
 			<key>longLoc</key>
-			<real>123.04</real>
+			<real>-123.04</real>
 			<key>Notes</key>
 			<string>The best cooked cats in all of America</string>
 			<key>Name</key>

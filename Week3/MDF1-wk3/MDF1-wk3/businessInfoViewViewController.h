@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/Mapkit.h>
-@interface businessInfoViewViewController : UIViewController 
+#import "myMapAnno.h"
+@interface businessInfoViewViewController : UIViewController <MKMapViewDelegate>
 {
     IBOutlet MKMapView *mapView;
     double businessLat;
@@ -16,6 +17,7 @@
     NSDictionary *itemPassedIn;
     
 }
+
 @property (nonatomic, strong) NSDictionary *itemPassedIn;
 
 @end
