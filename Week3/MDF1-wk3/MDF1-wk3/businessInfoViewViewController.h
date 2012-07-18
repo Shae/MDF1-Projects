@@ -15,8 +15,16 @@
     double businessLat;
     double businessLong;
     NSDictionary *itemPassedIn;
+    __weak IBOutlet UILabel *latLabel;
+    __weak IBOutlet UILabel *longLabel;
     
+    __weak IBOutlet UILabel *infoLabel;
+    __weak IBOutlet UILabel *nameLabel;
 }
+@property (weak, nonatomic) IBOutlet UILabel *latLabel;
+@property (weak, nonatomic) IBOutlet UILabel *longLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @property (nonatomic, strong) NSDictionary *itemPassedIn;
 

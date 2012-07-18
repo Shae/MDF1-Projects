@@ -14,6 +14,10 @@
 @end
 
 @implementation businessInfoViewViewController
+@synthesize latLabel;
+@synthesize longLabel;
+@synthesize nameLabel;
+@synthesize infoLabel;
 @synthesize itemPassedIn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,6 +45,7 @@
     */
     
     // converting NSNumber to float values
+    
     businessLat =  [[itemPassedIn objectForKey:@"latLoc"] floatValue];
     businessLong = [[itemPassedIn objectForKey:@"longLoc"] floatValue];
     
@@ -69,6 +74,11 @@
         [mapView addAnnotation:anno];
     }
     
+    nameLabel.text = [itemPassedIn objectForKey:@"Name"]; 
+    infoLabel.text = [itemPassedIn objectForKey:@"Notes"]; 
+    longLabel.text = [NSString stringWithFormat:@"Long: %@",[itemPassedIn objectForKey:@"latLoc"]]; 
+    latLabel.text = [NSString stringWithFormat:@"Lat: %@", [itemPassedIn objectForKey:@"longLoc"]];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -85,6 +95,16 @@
 
 - (void)viewDidUnload
 {
+    longLabel = nil;
+    latLabel = nil;
+    latLabel = nil;
+    longLabel = nil;
+    [self setLatLabel:nil];
+    [self setLongLabel:nil];
+    [self setNameLabel:nil];
+    [self setInfoLabel:nil];
+    nameLabel = nil;
+    infoLabel = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
