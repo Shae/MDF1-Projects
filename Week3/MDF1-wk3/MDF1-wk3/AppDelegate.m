@@ -16,6 +16,7 @@
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
 @synthesize myCurrentArray;
+@synthesize plistDictionary;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,10 +26,25 @@
      
     UIViewController *viewController2 = [[LargeMapViewController alloc] initWithNibName:@"LargeMapViewController" bundle:nil];
     UINavigationController *navBar = [[UINavigationController alloc] initWithRootViewController:viewController1];
+   
     
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:navBar, viewController2, nil];
     self.window.rootViewController = self.tabBarController;
+    
+    NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"fictBusiness.plist"];
+    plistAddress = [NSString stringWithFormat:@"%@", defaultPath];
+    
+    plistDictionary = [[NSDictionary alloc] initWithContentsOfFile:defaultPath];
+    if (plistDictionary != nil)
+    {
+        //Bringing in a NSArray from a plist and turn it into a NSMutableArray
+        businessArray = [NSMutableArray arrayWithArray:[plistDictionary objectForKey:@"list"]];
+        if (businessArray != nil) {
+            myCurrentArray = businessArray;
+        }
+    }
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -52,6 +68,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    
+     myCurrentArray = [[NSMutableArray alloc] init];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

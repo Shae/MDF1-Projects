@@ -19,7 +19,7 @@
 @implementation FirstViewController
 @synthesize businessTable;
 @synthesize editBtn;
-@synthesize businessArray;
+//@synthesize businessArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,7 +36,12 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    
+    //MOVED TO APP DELEGATE
+    
+   // AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+   // appDelegate.myCurrentArray = businessArray;
+   /* 
     NSString *defaultPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"fictBusiness.plist"];
     plistAddress = [NSString stringWithFormat:@"%@", defaultPath];
     
@@ -45,33 +50,27 @@
     {
         //Bringing in a NSArray from a plist and turn it into a NSMutableArray
         businessArray = [NSMutableArray arrayWithArray:[plistDictionary objectForKey:@"list"]];
-        
-        if (businessArray != nil)
-        {
-            for (int i=0; i<[businessArray count]; i++)
-            {
-                NSDictionary *BusinessDictionary = [businessArray objectAtIndex:i];
-                NSLog(@"Company #%d: %@", i, [BusinessDictionary objectForKey:@"Name"]);    
-                //NSLog(@"Notes: %@", [BusinessDictionary objectForKey:@"Notes"]);
-               // NSLog(@"Longitude: %@", [BusinessDictionary objectForKey:@"longLoc"]);
-               // NSLog(@"Latitude: %@", [BusinessDictionary objectForKey:@"latLoc"]);
-               // NSLog(@"------------"); 
-                
-            }
-        } 
-    
-    }
+        if (businessArray != nil) {
+            appDelegate.myCurrentArray = businessArray;
+        }
+    }*/
 }
 
-/*-(void)viewWillDisappear:(BOOL)animated
+-(void)viewWillDisappear:(BOOL)animated
 {
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.myCurrentArray = businessArray;
-}*/
+    /*
+     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.myCurrentArray = businessArray; 
+     */
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [businessArray count];
+    // to count the items in the appDelegate.myCurrentArray
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    
+    return [tempArray count];
     
 }
 
@@ -80,6 +79,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    //NSDictionary *tempDictionary = appDelegate.plistDictionary;
     
     TableViewCellController *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
@@ -92,7 +94,7 @@
             {
                 cell = (TableViewCellController*) view;
                 // setting cell label
-                NSDictionary *businessDictionary = [businessArray objectAtIndex:indexPath.row];
+                NSDictionary *businessDictionary = [tempArray objectAtIndex:indexPath.row];
                 cell.cellLabel.text = [businessDictionary objectForKey:@"Name"];
             }
         }
@@ -102,7 +104,11 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *selection = [businessArray objectAtIndex:indexPath.row];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    
+    //NSDictionary *tempDictionary = appDelegate.plistDictionary;
+    NSString *selection = [tempArray objectAtIndex:indexPath.row];
     businessInfoViewViewController *infoView = [[businessInfoViewViewController alloc] initWithNibName:@"businessInfoViewViewController" bundle:nil];
       if (selection != nil)
     {
@@ -111,7 +117,7 @@
          NSLog(@"You selected index position %d", selectedItem);
         
         // passing dictionary object to other view
-        infoView.itemPassedIn = [businessArray objectAtIndex:indexPath.row];
+        infoView.itemPassedIn = [tempArray objectAtIndex:indexPath.row];
     }
     [self.navigationController pushViewController:infoView animated:TRUE];
 }
@@ -144,20 +150,19 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         NSLog(@"we want to delete row = %d", indexPath.row);
         [businessTable beginUpdates];        
-        [businessArray removeObjectAtIndex:indexPath.row];         
+        [tempArray removeObjectAtIndex:indexPath.row];         
         [businessTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        
         [businessTable endUpdates];
+        // making changes if edit had been done
+        appDelegate.myCurrentArray = tempArray;
     }
 }
--(IBAction)onclick:(id)sender
-{
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    appDelegate.myCurrentArray = businessArray;
-    NSLog(@"TEST TEST %@", businessArray);
-}
+
 @end

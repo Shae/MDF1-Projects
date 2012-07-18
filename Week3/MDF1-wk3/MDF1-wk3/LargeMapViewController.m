@@ -30,8 +30,17 @@
 
 - (void)viewDidLoad
 {
+   
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
+    
+}
+-(void)viewWillAppear:(BOOL)animated
+{
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     arrayPassedIn = appDelegate.myCurrentArray; 
+    
     NSLog(@"%@", arrayPassedIn);
     if (arrayPassedIn != nil) {
         for ( int i=0; i<[arrayPassedIn count]; i++)
@@ -43,12 +52,18 @@
         NSLog(@"The array passed in is empty.");
     }
     
-    
-    
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    
+     for (int i=0; i<[arrayPassedIn count]; i++)
+     {
+     NSLog(@"%i", i);
+     NSDictionary *BusinessDictionary = [arrayPassedIn objectAtIndex:i];
+     NSLog(@"Company #%d: %@", i, [BusinessDictionary objectForKey:@"Name"]);    
+     // NSLog(@"Notes: %@", [BusinessDictionary objectForKey:@"Notes"]);
+     // NSLog(@"Longitude: %@", [BusinessDictionary objectForKey:@"longLoc"]);
+     // NSLog(@"Latitude: %@", [BusinessDictionary objectForKey:@"latLoc"]);
+     NSLog(@"------------"); 
+     
+     }
+     
 }
 
 - (void)viewDidUnload

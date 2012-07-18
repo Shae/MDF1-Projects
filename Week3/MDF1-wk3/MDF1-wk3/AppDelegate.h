@@ -11,11 +11,16 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 {
     NSMutableArray *myCurrentArray;
+    NSString *plistAddress;
+    NSDictionary *plistDictionary;
+    NSMutableArray *businessArray;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
+
 @property (strong, nonatomic) NSMutableArray *myCurrentArray;
+@property (strong, nonatomic) NSDictionary *plistDictionary;
 
 @end
