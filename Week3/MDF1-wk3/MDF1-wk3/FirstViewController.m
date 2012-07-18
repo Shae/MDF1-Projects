@@ -68,7 +68,7 @@
 {
     // to count the items in the appDelegate.myCurrentArray
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    NSMutableArray *tempArray = appDelegate.businessArray;
     
     return [tempArray count];
     
@@ -80,7 +80,7 @@
 {
     static NSString *CellIdentifier = @"Cell";
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    NSMutableArray *tempArray = appDelegate.businessArray;
     //NSDictionary *tempDictionary = appDelegate.plistDictionary;
     
     TableViewCellController *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -105,7 +105,7 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    NSMutableArray *tempArray = appDelegate.businessArray;
     
     //NSDictionary *tempDictionary = appDelegate.plistDictionary;
     NSString *selection = [tempArray objectAtIndex:indexPath.row];
@@ -151,7 +151,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSMutableArray *tempArray = appDelegate.myCurrentArray;
+    NSMutableArray *tempArray = appDelegate.businessArray;
     
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
@@ -161,7 +161,7 @@
         [businessTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         [businessTable endUpdates];
         // making changes if edit had been done
-        appDelegate.myCurrentArray = tempArray;
+        appDelegate.businessArray = tempArray;
     }
 }
 

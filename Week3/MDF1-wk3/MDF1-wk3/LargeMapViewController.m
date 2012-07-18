@@ -39,7 +39,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    arrayPassedIn = appDelegate.myCurrentArray; 
+    arrayPassedIn = appDelegate.businessArray; 
     
     NSLog(@"%@", arrayPassedIn);
     if (arrayPassedIn != nil) {

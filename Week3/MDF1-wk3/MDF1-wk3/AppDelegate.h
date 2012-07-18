@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
-@property (strong, nonatomic) NSMutableArray *myCurrentArray;
+@property (strong, nonatomic) NSMutableArray *businessArray;
 @property (strong, nonatomic) NSDictionary *plistDictionary;
 
 @end

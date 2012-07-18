@@ -15,7 +15,7 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
-@synthesize myCurrentArray;
+@synthesize businessArray;
 @synthesize plistDictionary;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
