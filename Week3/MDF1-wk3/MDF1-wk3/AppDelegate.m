@@ -9,13 +9,13 @@
 #import "AppDelegate.h"
 
 #import "FirstViewController.h"
-
-#import "SecondViewController.h"
+#import "LargeMapViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize myCurrentArray;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -23,7 +23,7 @@
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
      
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    UIViewController *viewController2 = [[LargeMapViewController alloc] initWithNibName:@"LargeMapViewController" bundle:nil];
     UINavigationController *navBar = [[UINavigationController alloc] initWithRootViewController:viewController1];
     
     self.tabBarController = [[UITabBarController alloc] init];

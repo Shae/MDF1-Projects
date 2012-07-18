@@ -21,6 +21,7 @@
     __weak IBOutlet UILabel *infoLabel;
     __weak IBOutlet UILabel *nameLabel;
 }
+
 @property (weak, nonatomic) IBOutlet UILabel *latLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;

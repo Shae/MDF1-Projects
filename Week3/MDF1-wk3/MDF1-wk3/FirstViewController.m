@@ -7,8 +7,10 @@
 //
 
 #import "FirstViewController.h"
+#import "AppDelegate.h"
 #import "TableViewCellController.h"
 #import "businessInfoViewViewController.h"
+#import "LargeMapViewController.h"
 
 @interface FirstViewController ()
 
@@ -17,6 +19,7 @@
 @implementation FirstViewController
 @synthesize businessTable;
 @synthesize editBtn;
+@synthesize businessArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,14 +53,21 @@
                 NSDictionary *BusinessDictionary = [businessArray objectAtIndex:i];
                 NSLog(@"Company #%d: %@", i, [BusinessDictionary objectForKey:@"Name"]);    
                 //NSLog(@"Notes: %@", [BusinessDictionary objectForKey:@"Notes"]);
-                NSLog(@"Longitude: %@", [BusinessDictionary objectForKey:@"longLoc"]);
-                NSLog(@"Latitude: %@", [BusinessDictionary objectForKey:@"latLoc"]);
-                NSLog(@"------------"); 
+               // NSLog(@"Longitude: %@", [BusinessDictionary objectForKey:@"longLoc"]);
+               // NSLog(@"Latitude: %@", [BusinessDictionary objectForKey:@"latLoc"]);
+               // NSLog(@"------------"); 
                 
             }
-        }   
+        } 
+    
     }
 }
+
+/*-(void)viewWillDisappear:(BOOL)animated
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.myCurrentArray = businessArray;
+}*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -113,6 +123,7 @@
     editBtn = nil;
 
     [self setEditBtn:nil];
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -136,14 +147,17 @@
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         NSLog(@"we want to delete row = %d", indexPath.row);
-          [businessTable beginUpdates];        
+        [businessTable beginUpdates];        
         [businessArray removeObjectAtIndex:indexPath.row];         
-        //[businessTable deleteRowsAtIndexPaths:[NSMutableArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-      
         [businessTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         
         [businessTable endUpdates];
     }
 }
-
+-(IBAction)onclick:(id)sender
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.myCurrentArray = businessArray;
+    NSLog(@"TEST TEST %@", businessArray);
+}
 @end

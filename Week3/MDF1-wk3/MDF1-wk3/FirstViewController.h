@@ -20,7 +20,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *businessTable;
 @property (weak, nonatomic) IBOutlet UIButton *editBtn;
+@property (nonatomic, strong) NSMutableArray *businessArray;
 
 - (IBAction)edit:(id)sender;
+-(IBAction)onclick:(id)sender;
 
 @end
