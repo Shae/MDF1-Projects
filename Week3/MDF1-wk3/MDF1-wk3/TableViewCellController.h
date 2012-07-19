@@ -11,8 +11,10 @@
 @interface TableViewCellController : UITableViewCell
 {
     
+    __weak IBOutlet UILabel *infoLabel;
     __weak IBOutlet UILabel *cellLabel;
 }
 @property (weak, nonatomic) IBOutlet UILabel *cellLabel;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end

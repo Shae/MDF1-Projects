@@ -26,7 +26,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Businesses", @"Businesses");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"house"];
     }
     return self;
 }
@@ -96,6 +96,7 @@
                 // setting cell label
                 NSDictionary *businessDictionary = [tempArray objectAtIndex:indexPath.row];
                 cell.cellLabel.text = [businessDictionary objectForKey:@"Name"];
+                cell.infoLabel.text = [businessDictionary objectForKey:@"Notes"];
             }
         }
     }
@@ -142,9 +143,13 @@
 - (IBAction)edit:(id)sender 
 {
     if (businessTable.isEditing == NO){
+        [editBtn setTitle:@"DONE" forState:UIControlStateNormal];
+        [editBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [businessTable setEditing:YES animated:YES];
     }else{
         [businessTable setEditing:NO animated:YES];
+        [editBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [editBtn setTitle:@"EDIT" forState:UIControlStateNormal];
     }
 }
 

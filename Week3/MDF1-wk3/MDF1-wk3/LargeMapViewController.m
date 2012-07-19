@@ -23,7 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Full Map", @"Full Map");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.tabBarItem.image = [UIImage imageNamed:@"pin"];
     }
     return self;
 }
@@ -61,11 +61,8 @@
 
     for (int i=0; i<[arrayPassedIn count]; i++)
     {
-         //NSLog(@"%i", i);
          NSDictionary *BusinessDictionary = [arrayPassedIn objectAtIndex:i];
     
-
-         //NSLog(@"------------");
         
         double busLat =  [[BusinessDictionary objectForKey:@"latLoc"] floatValue];
         double busLong = [[BusinessDictionary objectForKey:@"longLoc"] floatValue];        

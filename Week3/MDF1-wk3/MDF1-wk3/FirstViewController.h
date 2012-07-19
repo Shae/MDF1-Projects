@@ -10,20 +10,15 @@
 
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
-   // NSMutableArray *businessArray;
-    //NSString *plistAddress;
     __weak IBOutlet UITableView *businessTable;
     NSInteger selectedItem;
-   // NSDictionary *plistDictionary;
     __weak IBOutlet UIButton *editBtn;
-   
-    
-    
+
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *businessTable;
 @property (weak, nonatomic) IBOutlet UIButton *editBtn;
-//@property (nonatomic, strong) NSMutableArray *businessArray;
+
 
 - (IBAction)edit:(id)sender;
 

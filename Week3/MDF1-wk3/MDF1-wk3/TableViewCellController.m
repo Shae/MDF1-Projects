@@ -10,6 +10,7 @@
 
 @implementation TableViewCellController
 @synthesize cellLabel;
+@synthesize infoLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

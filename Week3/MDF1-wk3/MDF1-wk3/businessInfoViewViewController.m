@@ -36,13 +36,6 @@
 
 - (void)viewDidLoad
 {
-    //Proof of passed in info
-    /* 
-    NSLog(@"%@",[itemPassedIn objectForKey:@"latLoc"]);
-    NSLog(@"%@",[itemPassedIn objectForKey:@"longLoc"]);
-    NSLog(@"%@",[itemPassedIn objectForKey:@"Name"]);
-    NSLog(@"%@",[itemPassedIn objectForKey:@"Notes"]);
-    */
     
     // converting NSNumber to float values
     
