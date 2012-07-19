@@ -38,32 +38,64 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
+    //Clear map of all pins
+    [FullMap removeAnnotations:FullMap.annotations];
+    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     arrayPassedIn = appDelegate.businessArray; 
     
-    NSLog(@"%@", arrayPassedIn);
-    if (arrayPassedIn != nil) {
-        for ( int i=0; i<[arrayPassedIn count]; i++)
-        {
-            NSLog(@"%i", i);
-            i++;
-        }
-    }else {
-        NSLog(@"The array passed in is empty.");
-    }
+    MKCoordinateSpan span;
+    span.latitudeDelta = 1.0f;
+    span.longitudeDelta = 1.0f;
     
-     for (int i=0; i<[arrayPassedIn count]; i++)
-     {
-     NSLog(@"%i", i);
-     NSDictionary *BusinessDictionary = [arrayPassedIn objectAtIndex:i];
-     NSLog(@"Company #%d: %@", i, [BusinessDictionary objectForKey:@"Name"]);    
-     // NSLog(@"Notes: %@", [BusinessDictionary objectForKey:@"Notes"]);
-     // NSLog(@"Longitude: %@", [BusinessDictionary objectForKey:@"longLoc"]);
-     // NSLog(@"Latitude: %@", [BusinessDictionary objectForKey:@"latLoc"]);
-     NSLog(@"------------"); 
-     
+    CLLocationCoordinate2D location;
+    location.latitude = 47.0f;
+    location.longitude = -123.0f;
+    
+    MKCoordinateRegion region;
+    region.center = location;
+    region.span = span;
+    FullMap.region = region;
+    
+    //Initialize the myMapAnno and adding it to this page.
+
+    for (int i=0; i<[arrayPassedIn count]; i++)
+    {
+         //NSLog(@"%i", i);
+         NSDictionary *BusinessDictionary = [arrayPassedIn objectAtIndex:i];
+    
+
+         //NSLog(@"------------");
+        
+        double busLat =  [[BusinessDictionary objectForKey:@"latLoc"] floatValue];
+        double busLong = [[BusinessDictionary objectForKey:@"longLoc"] floatValue];        
+         NSLog(@"Coords: %f, %f", busLat, busLong);
+        
+        //CLLocationCoordinate2D locationEach;
+        location.latitude = busLat;
+        location.longitude = busLong;
+         
+         
+         if ((busLat == 0) || (busLong == 0))
+         {
+             //testing to make sure data is coming in
+             NSLog(@"Error in the Lat Long coords");
+         }
+        
+        myMapAnno *anno = [[myMapAnno alloc] initWithTitle:[BusinessDictionary objectForKey:@"Name"] coord:location];
+        [FullMap addAnnotation:anno];
+        
      }
-     
+}
+
+- (MKAnnotationView*)mapView: (MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    MKPinAnnotationView *annView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomPin"];
+    
+    annView.animatesDrop = TRUE;
+    annView.canShowCallout = TRUE;
+    annView.calloutOffset = CGPointMake(-5, 5);
+    return annView;
 }
 
 - (void)viewDidUnload

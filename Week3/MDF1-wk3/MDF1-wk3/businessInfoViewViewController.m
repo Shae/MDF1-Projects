@@ -56,8 +56,8 @@
     }
     
     MKCoordinateSpan span;
-    span.latitudeDelta = 0.3f;
-    span.longitudeDelta = 0.3f;
+    span.latitudeDelta = 0.4f;
+    span.longitudeDelta = 0.4f;
     
     CLLocationCoordinate2D location;
     location.latitude = businessLat;
