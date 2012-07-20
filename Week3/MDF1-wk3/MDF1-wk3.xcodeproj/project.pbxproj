@@ -30,6 +30,7 @@
 		BF8A01C115B63F8000CED077 /* LargeMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01BF15B63F7F00CED077 /* LargeMapViewController.xib */; };
 		BF8A01C715B7B36D00CED077 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01C615B7B36D00CED077 /* house.png */; };
 		BF8A01C915B7B63E00CED077 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01C815B7B63E00CED077 /* pin.png */; };
+		BF8A01CB15B8DF7400CED077 /* FLOWCHART.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8A01CA15B8DF7400CED077 /* FLOWCHART.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		BF8A01BF15B63F7F00CED077 /* LargeMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeMapViewController.xib; sourceTree = "<group>"; };
 		BF8A01C615B7B36D00CED077 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
 		BF8A01C815B7B63E00CED077 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		BF8A01CA15B8DF7400CED077 /* FLOWCHART.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FLOWCHART.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,20 +115,15 @@
 		BF8A017215B4AFD300CED077 /* MDF1-wk3 */ = {
 			isa = PBXGroup;
 			children = (
+				BF8A01CA15B8DF7400CED077 /* FLOWCHART.png */,
 				BF8A017B15B4AFD300CED077 /* AppDelegate.h */,
 				BF8A017C15B4AFD300CED077 /* AppDelegate.m */,
 				BF8A017E15B4AFD300CED077 /* FirstViewController.h */,
 				BF8A017F15B4AFD300CED077 /* FirstViewController.m */,
-				BF8A01C815B7B63E00CED077 /* pin.png */,
-				BF8A01C615B7B36D00CED077 /* house.png */,
 				BF8A018C15B4AFD300CED077 /* FirstViewController.xib */,
-				BF8A018115B4AFD300CED077 /* first.png */,
-				BF8A018315B4AFD300CED077 /* first@2x.png */,
 				BF8A01BD15B63F7F00CED077 /* LargeMapViewController.h */,
 				BF8A01BE15B63F7F00CED077 /* LargeMapViewController.m */,
 				BF8A01BF15B63F7F00CED077 /* LargeMapViewController.xib */,
-				BF8A018815B4AFD300CED077 /* second.png */,
-				BF8A018A15B4AFD300CED077 /* second@2x.png */,
 				BF8A01AC15B4CEC100CED077 /* TableViewCellController.h */,
 				BF8A01AD15B4CEC200CED077 /* TableViewCellController.m */,
 				BF8A01AA15B4CBCD00CED077 /* CellViewController.xib */,
@@ -135,6 +132,12 @@
 				BF8A01B515B5E4E400CED077 /* businessInfoViewViewController.xib */,
 				BF8A01BA15B625C700CED077 /* myMapAnno.h */,
 				BF8A01BB15B625C700CED077 /* myMapAnno.m */,
+				BF8A01C815B7B63E00CED077 /* pin.png */,
+				BF8A018315B4AFD300CED077 /* first@2x.png */,
+				BF8A018115B4AFD300CED077 /* first.png */,
+				BF8A018815B4AFD300CED077 /* second.png */,
+				BF8A018A15B4AFD300CED077 /* second@2x.png */,
+				BF8A01C615B7B36D00CED077 /* house.png */,
 				BF8A017315B4AFD300CED077 /* Supporting Files */,
 			);
 			path = "MDF1-wk3";
@@ -214,6 +217,7 @@
 				BF8A01C115B63F8000CED077 /* LargeMapViewController.xib in Resources */,
 				BF8A01C715B7B36D00CED077 /* house.png in Resources */,
 				BF8A01C915B7B63E00CED077 /* pin.png in Resources */,
+				BF8A01CB15B8DF7400CED077 /* FLOWCHART.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
