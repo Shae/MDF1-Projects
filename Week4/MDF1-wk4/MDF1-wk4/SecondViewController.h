@@ -10,7 +10,11 @@
 
 @interface SecondViewController : UIViewController
 {
-    
+    NSURLRequest *request;
+    NSURL *url;
+    NSURLConnection *connection;
+    NSData *myData;
+    NSMutableData *requestData;
     __weak IBOutlet UIWebView *webView;
 }
 @property (weak, nonatomic) IBOutlet UIWebView *webView;

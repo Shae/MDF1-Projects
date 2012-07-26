@@ -33,7 +33,7 @@
     numItems = 0;
     stuff = [[NSMutableArray alloc] init];
     
-    url = [[NSURL alloc] initWithString:@"https://dl.dropbox.com/u/56452103/myXMLDoc.xml"];
+    url = [[NSURL alloc] initWithString:@"http://myarchive.net46.net/myXMLDoc.xml"];
     request = [[NSURLRequest alloc] initWithURL:url];
     
     if (request != nil)
