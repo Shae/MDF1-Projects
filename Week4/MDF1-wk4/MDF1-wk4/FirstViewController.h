@@ -23,6 +23,7 @@
     __weak IBOutlet UIView *view2;
     IBOutlet UIView *mainView;
 }
+@property (strong, nonatomic) NSMutableData *requestData;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *itemLabel;
 @property (weak, nonatomic) IBOutlet UIView *view2;

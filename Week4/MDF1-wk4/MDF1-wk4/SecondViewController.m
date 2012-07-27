@@ -22,23 +22,20 @@
         self.title = NSLocalizedString(@"Second", @"Second");
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
-    return self;
+
+        return self;
 }
 							
 - (void)viewDidLoad
 {
     url = [[NSURL alloc] initWithString:@"https://dl.dropbox.com/u/56452103/myXMLDoc.xml"];
     request = [[NSURLRequest alloc] initWithURL:url];
-    requestData = [NSMutableData data];
-    NSString *stringIt = requestData;
-    if (request != nil) {
-        webView.scalesPageToFit = TRUE;
-        [webView loadHTMLString:stringIt baseURL:url];
-    }
-    
+    webView.scalesPageToFit = TRUE;
+    [webView loadRequest:request];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)viewDidUnload
 {
@@ -52,5 +49,8 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
 
+}
 @end

@@ -19,6 +19,7 @@
 @synthesize view2;
 @synthesize table;
 @synthesize mainView;
+@synthesize requestData;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,6 +52,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     return self;
 }
+
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {

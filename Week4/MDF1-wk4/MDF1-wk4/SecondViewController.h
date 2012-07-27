@@ -15,6 +15,7 @@
     NSURLConnection *connection;
     NSData *myData;
     NSMutableData *requestData;
+    NSString *requestString;
     __weak IBOutlet UIWebView *webView;
 }
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
